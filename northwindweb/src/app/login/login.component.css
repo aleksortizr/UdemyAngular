@@ -1,0 +1,31 @@
+.login-container{
+    flex-direction: row;
+    display: flex;
+    box-sizing: border-box;
+    max-height: 100%;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+    padding-top: 200px;
+}
+
+.login-form{
+    flex-direction: column;
+    display: flex;
+}
+
+.login-card{
+    min-width: 400px;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }

@@ -1,0 +1,29 @@
+<div class="login-container">
+<mat-card class="login-card"> 
+  <mat-card-content>
+      <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm)">
+        <div class="login-control-input">
+          <mat-icon>email</mat-icon>
+          <mat-form-field class="login-form-field">
+            <input matInput placeholder="Ex. pat@example.com" formControlName="email">
+            <mat-error *ngIf="loginForm.get('email').hasError('required')">please enter your email</mat-error>
+            <mat-error *ngIf="loginForm.get('email').hasError('email')">E-mail is not valid</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="login-control-input">
+          <mat-icon>vpn_key</mat-icon>
+          <mat-form-field class="login-form-field">
+            <input matInput title="Password" type="password" formControlName="password">
+          </mat-form-field>
+        </div>
+        <br>
+        <div *ngIf="loginError">
+          <p class="login-error"></p>
+        </div>
+        <div>
+          <button mat-stroked-button type="submit" [disabled]="loginForm.invalid">Login</button>
+        </div>
+      </form>
+</mat-card-content>
+</mat-card>
+</div>
